@@ -60,7 +60,7 @@ const closeMenu = () => {
       class="relative w-6 h-5 flex flex-col justify-between cursor-pointer lg:hidden"
     >
       <span
-        class="absolute top-0 left-0 w-6 h-0.5 bg-secondary transition-all duration-300"
+        class="absolute top-[0.0313rem] left-0 w-6 h-0.5 bg-secondary transition-all duration-300"
         :class="{ 'rotate-45 translate-y-2': isOpen }"
       ></span>
 
@@ -70,7 +70,7 @@ const closeMenu = () => {
       ></span>
 
       <span
-        class="absolute bottom-0 left-0 w-6 h-0.5 bg-secondary transition-all duration-300"
+        class="absolute bottom-[0.125rem] left-0 w-6 h-0.5 bg-secondary transition-all duration-300"
         :class="{ '-rotate-45 -translate-y-2': isOpen }"
       ></span>
     </div>
