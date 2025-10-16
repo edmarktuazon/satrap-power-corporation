@@ -1,1 +1,18 @@
 @import 'tailwindcss';
+
+@theme {
+  /* font  */
+  --font-montserrat: 'Montserrat', sans-serif;
+  /* color */
+  --color-primary: oklch(26.6% 0.065 152.934);
+  --color-secondary: oklch(0.365 0.014 254.7);
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl px-6;
+  }
+  .three-column-grid {
+    @apply grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8;
+  }
+}
