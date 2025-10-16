@@ -8,5 +8,6 @@ import HeroSectionWrapper from './HeroSectionWrapper.vue'
     <template #hero-paragraph>
       Your Trusted Partner in Virtual Assistance and Staffing Solutions</template
     >
+    <!-- removed slot button -->
   </HeroSectionWrapper>
 </template>
