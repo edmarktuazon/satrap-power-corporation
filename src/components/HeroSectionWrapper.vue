@@ -1,3 +1,6 @@
+<script setup>
+import ContactButton from './buttons/ContactButton.vue'
+</script>
 <template>
   <section
     class="bg-[url('https://images.pexels.com/photos/3747075/pexels-photo-3747075.jpeg')] bg-center bg-cover bg-no-repeat h-screen w-full"
@@ -11,9 +14,7 @@
           <p class="text-lg md:text-2xl mb-8 text-white">
             <slot name="hero-paragraph"></slot>
           </p>
-          <button>
-            <slot name="hero-button"></slot>
-          </button>
+          <ContactButton label="Contact Us" />
         </div>
       </div>
     </div>

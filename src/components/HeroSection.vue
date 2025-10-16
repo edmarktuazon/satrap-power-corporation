@@ -8,6 +8,5 @@ import HeroSectionWrapper from './HeroSectionWrapper.vue'
     <template #hero-paragraph>
       Your Trusted Partner in Virtual Assistance and Staffing Solutions</template
     >
-    <template #hero-button>Click me</template>
   </HeroSectionWrapper>
 </template>
