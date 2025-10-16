@@ -4,9 +4,10 @@ import HeroSectionWrapper from './HeroSectionWrapper.vue'
 
 <template>
   <HeroSectionWrapper>
-    <template #heading>Welcome HERO</template>
-    <template #paragraph>
+    <template #hero-heading>Welcome HERO</template>
+    <template #hero-paragraph>
       Your Trusted Partner in Virtual Assistance and Staffing Solutions</template
     >
+    <template #hero-button>Click me</template>
   </HeroSectionWrapper>
 </template>
