@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Our Mission",
+    "content": "To empower businesses by providing innovative web solutions and exceptional user experiences.",
+    "image": "/images/mission.jpg"
+  },
+  {
+    "title": "Our Vision",
+    "content": "To become a trusted digital partner for brands worldwide, transforming ideas into impactful results.",
+    "image": "/images/vision.jpg"
+  },
+  {
+    "title": "Our Core Values",
+    "content": "Innovation, collaboration, and integrity guide everything we do.",
+    "image": "/images/values.jpg"
+  }
+]
