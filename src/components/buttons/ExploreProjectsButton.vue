@@ -4,7 +4,7 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 
 const goToPage = () => {
-  router.push('/our-company')
+  router.push('/our-projects')
 }
 
 defineProps({
@@ -18,7 +18,7 @@ defineProps({
 <template>
   <button
     @click="goToPage"
-    class="bg-white p-3 font-medium text-secondary transition duration-150 cursor-pointer lg:w-auto w-full hover:bg-primary"
+    class="bg-white p-3 font-medium text-secondary transition duration-150 hover:bg-primary cursor-pointer lg:w-auto w-full"
   >
     {{ label }}
   </button>

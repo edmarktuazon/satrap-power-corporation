@@ -20,7 +20,7 @@
 | **`onRenderTracked()`**   | Debugging tool — ginagamit para makita kung kailan ni-track ng Vue ang reactive dependencies.                        |
 | **`onRenderTriggered()`** | Debugging tool din — para makita kung bakit nag-trigger ang re-render.                                               |
 
-| Function             | Description (Taglish)                                                                                               |
+| Function             | Description                                                                                                         |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | **`defineProps()`**  | Para i-define ang props ng component (sa `<script setup>`). Example:`const props = defineProps({ label: String })`. |
 | **`defineEmits()`**  | Para mag-emit ng custom events. Example:`const emit = defineEmits(['submit'])`.                                     |
@@ -29,7 +29,7 @@
 | **`useSlots()`**     | Access sa slots data sa JS side.                                                                                    |
 | **`useAttrs()`**     | Access sa lahat ng attributes na ipinasa sa component pero hindi naka-declare bilang props.                         |
 
-| Function                   | Descriptio                                                                                                          |
+| Function                   | Description                                                                                                         |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | **`getCurrentInstance()`** | Kukunin ang kasalukuyang Vue component instance — ginagamit minsan para sa advanced logic (rarely used).            |
 | **`nextTick()`**           | Ipapahintay si Vue matapos mag-update sa DOM bago magpatuloy. Useful sa mga UI changes. Example:`await nextTick()`. |

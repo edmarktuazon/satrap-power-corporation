@@ -1,20 +1,24 @@
 <script setup>
-import ContactButton from './buttons/ContactButton.vue'
+import ExploreProjectsButton from './buttons/ExploreProjectsButton.vue'
+import LearnMoreButton from './buttons/LearnMoreButton.vue'
 </script>
 <template>
-  <section
-    class="bg-[url('https://images.pexels.com/photos/3747075/pexels-photo-3747075.jpeg')] bg-center bg-cover bg-no-repeat h-screen w-full"
-  >
-    <div class="container">
-      <div class="three-column-grid">
-        <div class="flex flex-col items-center justify-center">
-          <h1 class="text-sm md:text-lg text-white mb-2">
+  <section class="section-spacing min-h-[50dvh] bg-primary font-montserrat">
+    <div class="layout-container">
+      <div class="grid-2cols">
+        <div class="flex-start space-y-5">
+          <!-- heading -->
+          <h1 class="text-6xl text-white text-fluid-lg font-medium">
             <slot name="hero-heading"></slot>
           </h1>
-          <p class="text-lg md:text-2xl mb-8 text-white">
+          <!-- sub heading -->
+          <p class="text-md text-white">
             <slot name="hero-paragraph"></slot>
           </p>
-          <ContactButton label="Contact Us" />
+          <div class="flex-center-row mt-6">
+            <ExploreProjectsButton label="Explore Our Projects" />
+            <LearnMoreButton label="Learn More About Us" />
+          </div>
         </div>
       </div>
     </div>

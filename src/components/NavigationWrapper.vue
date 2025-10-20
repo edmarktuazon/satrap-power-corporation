@@ -1,13 +1,14 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router'
 import { reactive, ref, onMounted, onUnmounted } from 'vue'
+
+import navLogo from '../assets/Satrap_logo_gold_transparent.png'
 
 const navLinks = reactive([
   { name: 'Home', to: '/' },
-  { name: 'About', to: '/about' },
-  { name: 'Services', to: '/services' },
-  { name: 'Testimonials', to: '/testimonials' },
-  { name: 'Contact', to: '/contact' },
+  { name: 'Our Company', to: '/our-company' },
+  { name: 'Our Projects', to: '/our-projects' },
+  { name: 'Contact Us', to: '/contact' },
 ])
 
 const isOpen = ref(false)
@@ -51,15 +52,29 @@ onUnmounted(() => {
     :class="isHidden ? '-translate-y-full' : 'translate-y-0'"
   >
     <div
-      class="flex justify-between lg:justify-around items-center font-montserrat px-6 min-h-[4.375rem]"
+      class="flex justify-between lg:justify-around items-center font-montserrat px-6 lg:px-0 min-h-[6.25rem]"
     >
-      <a href="">Logo</a>
-
+      <RouterLink to="/">
+        <div
+          class="flex justify-center gap-2 lg:justify-start items-center px-6 lg:px-12 min-h-[6.25rem]"
+        >
+          <img :src="navLogo" alt="Company Logo" class="h-12 lg:h-16 w-auto object-contain" />
+          <p class="font-medium text-secondary">SATRAP POWER CORPORATION</p>
+        </div>
+      </RouterLink>
       <!-- Desktop nav -->
       <nav>
         <ul class="space-x-8 font-medium text-secondary lg:flex hidden">
-          <li v-for="link in navLinks" :key="link.to">
-            <RouterLink :to="link.to" class="hover:text-primary">{{ link.name }}</RouterLink>
+          <li v-for="link in navLinks" :key="link.to" class="relative group">
+            <RouterLink
+              :to="link.to"
+              class="text-secondary-color transition-colors duration-300 group-hover:text-primary"
+            >
+              {{ link.name }}
+              <span
+                class="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"
+              ></span>
+            </RouterLink>
           </li>
         </ul>
       </nav>
@@ -68,12 +83,14 @@ onUnmounted(() => {
       <transition name="fade">
         <ul
           v-if="isOpen"
-          class="absolute top-[4.375rem] left-0 w-full bg-white shadow-md rounded-b-lg flex flex-col items-start py-6 px-10 space-y-4 font-medium text-secondary lg:hidden"
+          class="absolute top-[6.25rem] left-0 w-full bg-white shadow-md rounded-b-lg flex flex-col items-start font-medium text-secondary lg:hidden"
         >
-          <li v-for="link in navLinks" :key="link.to">
-            <RouterLink :to="link.to" @click="closeMenu" class="hover:text-primary">{{
-              link.name
-            }}</RouterLink>
+          <li
+            v-for="link in navLinks"
+            :key="link.to"
+            class="border-b-[0.0625rem] border-gray-200 w-full py-4 px-6"
+          >
+            <RouterLink :to="link.to" @click="closeMenu">{{ link.name }}</RouterLink>
           </li>
         </ul>
       </transition>
@@ -98,6 +115,8 @@ onUnmounted(() => {
       </button>
     </div>
   </header>
+
+  <RouterView />
 </template>
 
 <style scoped>

@@ -1,18 +1,60 @@
 @import 'tailwindcss';
 
-@theme {
-  /* font  */
-  --font-montserrat: 'Montserrat', sans-serif;
-  /* color */
-  --color-primary: oklch(26.6% 0.065 152.934);
-  --color-secondary: oklch(0.365 0.014 254.7);
+@layer components {
+  .section-spacing {
+    @apply py-16 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-48;
+  }
+  /* layout */
+  .layout-container {
+    @apply px-6 py-12 mx-auto gap-6;
+  }
+  /* grid */
+  .grid-4cols {
+    @apply grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-6;
+  }
+  .grid-3cols {
+    @apply grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6;
+  }
+  .grid-2cols {
+    @apply grid lg:grid-cols-2 grid-cols-1 gap-6;
+  }
+  /* flex */
+  .flex-start {
+    @apply flex flex-col items-start justify-start;
+  }
+  .flex-center-row {
+    @apply grid lg:flex lg:flex-row flex-col items-center justify-center gap-4;
+  }
+  .flex-center-col {
+    @apply flex flex-col items-center justify-center gap-4;
+  }
 }
 
-@layer components {
-  .container {
-    @apply max-w-7xl px-6;
+@layer utilities {
+  .text-fluid-lg {
+    font-size: clamp(2.75rem, 2.5714rem + 0.8929vw, 4rem);
   }
-  .three-column-grid {
-    @apply grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8;
+  .text-fluid-md {
+    font-size: clamp(1.875rem, 1.7143rem + 0.5357vw, 2.25rem);
+  }
+
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .text-primary {
+    color: #c99509;
+  }
+
+  .bg-primary {
+    background-color: #c99509;
+  }
+
+  .text-secondary {
+    color: oklch(0.365 0.014 254.7);
+  }
+
+  .bg-secondary {
+    background-color: oklch(0.365 0.014 254.7);
   }
 }

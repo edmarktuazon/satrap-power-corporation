@@ -1,20 +1,23 @@
 <script setup>
 // import companyInfo from '@/data/companyInfo.json'
-import MissionVisionValues from './MissionVisionValues.vue'
+import OurCompany from './OurCompany.vue'
 </script>
 
 <template>
-  <div
-    class="bg-[url('https://images.pexels.com/photos/3747075/pexels-photo-3747075.jpeg')] bg-center bg-cover bg-no-repeat h-screen w-full"
-  >
-    <div class="flex flex-col items-center justify-center">
-      <h1 class="text-sm md:text-lg text-white mb-2">
-        <slot name="heading"></slot>
-      </h1>
-      <p class="text-lg md:text-2xl mb-8 text-white">
-        <slot name="paragraph"></slot>
-      </p>
-      <MissionVisionValues />
+  <section class="section-spacing bg-gray-100 font-montserrat">
+    <div class="layout-container">
+      <div class="grid-2cols gap-16">
+        <div>
+          <h2 class="text-fluid-md text-secondary font-medium">
+            <slot name="about-heading"></slot>
+          </h2>
+          <span class="block bg-primary w-30 h-1 my-6"></span>
+          <p class="text-base mb-8 text-secondary text-justify leading-relaxed">
+            <slot name="about-paragraph"></slot>
+          </p>
+        </div>
+        <OurCompany />
+      </div>
     </div>
-  </div>
+  </section>
 </template>
