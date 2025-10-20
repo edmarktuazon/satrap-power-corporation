@@ -1,0 +1,50 @@
+{
+  "boardOfDirectors": [
+    {
+      "name": "Mr. Luis Chavit C. Singson",
+      "role": "Chairman and President"
+    },
+    {
+      "name": "Ms. Richelle Louise S. Michael",
+      "role": "Director and Chief Finance Officer"
+    },
+    {
+      "name": "Mr. Rafael Martin O. Sison",
+      "role": "Director and Corporate Secretary"
+    },
+    {
+      "name": "Mr. Randolf Singson",
+      "role": "Director"
+    },
+    {
+      "name": "Mr. Romel Singson",
+      "role": "Director"
+    },
+    {
+      "name": "Mr. Rico Abarentos",
+      "role": "Director"
+    }
+  ],
+  "management": [
+    {
+      "name": "Engr. Dominador R. Borje, Jr.",
+      "role": "Chief Executive Officer"
+    },
+    {
+      "name": "Mr. Rafael Martin O. Sison",
+      "role": "Technical Assistant to the CEO"
+    },
+    {
+      "name": "Engr. Edelito A. Badua",
+      "role": "Business Development Manager"
+    },
+    {
+      "name": "Atty. Jose G. Samonte",
+      "role": "Legal Counsel"
+    },
+    {
+      "name": "Engr. Anthony L. Javelosa",
+      "role": "Asst. Business Development Manager"
+    }
+  ]
+}

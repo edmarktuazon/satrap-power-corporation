@@ -1,24 +1,9 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
+import companyInfo from '../data/companyInfo.json'
 
-const boardOfDirectors = ref([])
-const management = ref([])
-
-onMounted(async () => {
-  try {
-    const response = await fetch('/data/companyInfo.json')
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`)
-    }
-    const data = await response.json()
-    boardOfDirectors.value = data.boardOfDirectors || []
-    management.value = data.management || []
-  } catch (error) {
-    console.error('Error fetching or parsing JSON:', error)
-    boardOfDirectors.value = []
-    management.value = []
-  }
-})
+const boardOfDirectors = ref(companyInfo.boardOfDirectors || [])
+const management = ref(companyInfo.management || [])
 </script>
 
 <template>
@@ -28,7 +13,6 @@ onMounted(async () => {
       <div v-for="(person, index) in boardOfDirectors" :key="'board-' + index" class="mb-4">
         <h4 class="font-semibold text-lg text-white">{{ person.name }}</h4>
         <em class="text-white">{{ person.role }}</em>
-        <!-- <img :src="person.image" :alt="person.name" class="w-32 h-32 object-cover rounded-lg mt-2" /> -->
       </div>
     </div>
 
@@ -37,7 +21,6 @@ onMounted(async () => {
       <div v-for="(person, index) in management" :key="'management-' + index" class="mb-4">
         <h4 class="font-semibold text-lg text-white">{{ person.name }}</h4>
         <em class="text-white">{{ person.role }}</em>
-        <!-- <img :src="person.image" :alt="person.name" class="w-32 h-32 object-cover rounded-lg mt-2" /> -->
       </div>
     </div>
   </div>

@@ -2,7 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import { reactive, ref, onMounted, onUnmounted } from 'vue'
 
-import navLogo from '../assets/Satrap_logo_gold_transparent.png'
+import navLogo from '/src/assets/images/Satrap_logo_gold_transparent.png'
 
 const navLinks = reactive([
   { name: 'Home', to: '/' },

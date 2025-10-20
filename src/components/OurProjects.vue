@@ -1,21 +1,26 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
+import companyProjects from '../data/companyProjects.json'
+import metrowalkSolar2 from '../assets/images/projects/metrowalk_solar_2.png'
+import sanmarcelinoSolar1 from '../assets/images/projects/sanmarcelino_solar_1.png'
+import santaAgroBiomass1 from '../assets/images/projects/santa_agro_biomass_1.png'
+import santaMswBiomass1 from '../assets/images/projects/santa_msw_biomass_1.png'
+import suyo1Hydro1 from '../assets/images/projects/suyo1_hydro_1.png'
 
 const projects = ref([])
 
-onMounted(async () => {
-  try {
-    const response = await fetch('/data/companyProjects.json')
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`)
-    }
-    const data = await response.json()
-    projects.value = data.projects || []
-  } catch (error) {
-    console.error('Error fetching or parsing JSON:', error)
-    projects.value = []
-  }
-})
+const imageMap = {
+  metrowalk_solar_2: metrowalkSolar2,
+  sanmarcelino_solar_1: sanmarcelinoSolar1,
+  santa_agro_biomass_1: santaAgroBiomass1,
+  santa_msw_biomass_1: santaMswBiomass1,
+  suyo1_hydro_1: suyo1Hydro1,
+}
+
+projects.value = (companyProjects.projects || []).map((project) => ({
+  ...project,
+  image: imageMap[project.imageId] || '',
+}))
 </script>
 
 <template>
