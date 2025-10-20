@@ -16,7 +16,7 @@ import LearnMoreButton from './buttons/LearnMoreButton.vue'
             <slot name="hero-paragraph"></slot>
           </p>
           <!-- props button -->
-          <div class="flex-center-row mt-6">
+          <div class="flex-center-row mt-6 hidden">
             <ExploreProjectsButton label="Explore Our Projects" />
             <LearnMoreButton label="Learn More About Us" />
           </div>

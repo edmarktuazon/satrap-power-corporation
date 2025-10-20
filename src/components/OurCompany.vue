@@ -4,6 +4,18 @@ import companyInfo from '../data/companyInfo.json'
 
 const boardOfDirectors = ref(companyInfo.boardOfDirectors || [])
 const management = ref(companyInfo.management || [])
+
+// const companyInfo = ref([])
+
+// onMounted(async () => {
+//   try {
+//     const response = await fetch('../data/companyInfo.json')
+//     const data = await response.json()
+//     companyInfo.value = data.projects || []
+//   } catch (error) {
+//     console.error('Error fetching projects:', error)
+//   }
+// })
 </script>
 
 <template>

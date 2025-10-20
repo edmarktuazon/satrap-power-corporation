@@ -55,12 +55,14 @@ onUnmounted(() => {
       class="flex justify-between lg:justify-around items-center font-montserrat px-6 lg:px-0 min-h-[6.25rem]"
     >
       <RouterLink to="/">
-        <div
+        <figure
           class="flex justify-center gap-2 lg:justify-start items-center lg:px-12 min-h-[6.25rem]"
         >
           <img :src="navLogo" alt="Company Logo" class="h-12 lg:h-16 w-auto object-contain" />
-          <p class="font-medium text-secondary">SATRAP POWER CORPORATION</p>
-        </div>
+          <figcaption class="font-medium text-secondary lg:text-base text-sm">
+            Satrap Power Corporation
+          </figcaption>
+        </figure>
       </RouterLink>
       <!-- Desktop nav -->
       <nav>
