@@ -5,11 +5,19 @@ const boardOfDirectors = ref([])
 const management = ref([])
 
 onMounted(async () => {
-  const response = await fetch('/public/data/companyInfo.json')
-  const data = await response.json()
-
-  boardOfDirectors.value = data.boardOfDirectors
-  management.value = data.management
+  try {
+    const response = await fetch('/data/companyInfo.json')
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`)
+    }
+    const data = await response.json()
+    boardOfDirectors.value = data.boardOfDirectors || []
+    management.value = data.management || []
+  } catch (error) {
+    console.error('Error fetching or parsing JSON:', error)
+    boardOfDirectors.value = []
+    management.value = []
+  }
 })
 </script>
 

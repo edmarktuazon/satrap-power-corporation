@@ -4,11 +4,17 @@ import { ref, onMounted } from 'vue'
 const projects = ref([])
 
 onMounted(async () => {
-  const response = await fetch('/public/data/companyProjects.json')
-
-  const data = await response.json()
-
-  projects.value = data.projects
+  try {
+    const response = await fetch('/data/companyProjects.json')
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`)
+    }
+    const data = await response.json()
+    projects.value = data.projects || []
+  } catch (error) {
+    console.error('Error fetching or parsing JSON:', error)
+    projects.value = []
+  }
 })
 </script>
 
