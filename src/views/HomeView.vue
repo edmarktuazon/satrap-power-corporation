@@ -2,6 +2,9 @@
 import HeroSection from '@/components/HeroSection.vue'
 import NavigationSection from '@/components/NavigationWrapper.vue'
 import AboutSection from '@/components/AboutSection.vue'
+import ProjectSection from '@/components/ProjectSection.vue'
+import ChevronUpIcon from '@/components/icons/ChevronUpIcon.vue'
+import FooterSection from '@/components/FooterSection.vue'
 
 import { ref, onMounted, onUnmounted } from 'vue'
 
@@ -31,16 +34,17 @@ onUnmounted(() => {
         <button
           v-if="isActiveToTopButton"
           @click="goToTop"
-          class="fixed bottom-5 right-5 bg-white px-4 py-2 rounded shadow hover:bg-gray-100 transition"
+          class="fixed bottom-5 right-5 bg-primary p-3 rounded-full cursor-pointer"
         >
-          Top
+          <ChevronUpIcon class="w-7 h-7 text-white" />
         </button>
       </transition>
     </div>
-
     <NavigationSection />
     <HeroSection />
     <AboutSection />
+    <ProjectSection />
+    <FooterSection />
   </main>
 </template>
 

@@ -56,7 +56,7 @@ onUnmounted(() => {
     >
       <RouterLink to="/">
         <div
-          class="flex justify-center gap-2 lg:justify-start items-center px-6 lg:px-12 min-h-[6.25rem]"
+          class="flex justify-center gap-2 lg:justify-start items-center lg:px-12 min-h-[6.25rem]"
         >
           <img :src="navLogo" alt="Company Logo" class="h-12 lg:h-16 w-auto object-contain" />
           <p class="font-medium text-secondary">SATRAP POWER CORPORATION</p>
@@ -115,7 +115,6 @@ onUnmounted(() => {
       </button>
     </div>
   </header>
-
   <RouterView />
 </template>
 

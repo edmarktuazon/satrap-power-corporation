@@ -2,7 +2,7 @@
 
 @layer components {
   .section-spacing {
-    @apply py-16 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-48;
+    @apply py-16 px-4 md:px-8 lg:px-12 xl:px-20 2xl:px-36;
   }
   /* layout */
   .layout-container {
@@ -18,9 +18,15 @@
   .grid-2cols {
     @apply grid lg:grid-cols-2 grid-cols-1 gap-6;
   }
+  .grid-2cols-xl {
+    @apply grid grid-cols-1 xl:grid-cols-2 gap-6;
+  }
   /* flex */
   .flex-start {
     @apply flex flex-col items-start justify-start;
+  }
+  .flex-center {
+    @apply flex items-start gap-6 flex-col lg:flex-row lg:items-center;
   }
   .flex-center-row {
     @apply grid lg:flex lg:flex-row flex-col items-center justify-center gap-4;

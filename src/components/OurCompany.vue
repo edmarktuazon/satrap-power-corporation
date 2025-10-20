@@ -14,7 +14,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="grid-2cols">
+  <div class="grid-2cols-xl">
     <div class="bg-secondary p-10">
       <h3 class="text-2xl font-bold mb-10 text-white">Board of Directors</h3>
       <div v-for="(person, index) in boardOfDirectors" :key="'board-' + index" class="mb-4">

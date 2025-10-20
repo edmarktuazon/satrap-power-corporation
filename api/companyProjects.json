@@ -1,0 +1,39 @@
+{
+  "projects": [
+    {
+      "title": "610kW Metrowalk Solar Carpark",
+      "location": "Metrowalk Commercial Complex, Meralco Ave., Ortigas Center, Pasig City, Philippines",
+      "description": "This parking compound will be shaded with high efficient solar panels that will generate electricity for the daytime demand of the Metrowalk Commercial Complex.",
+      "mapUrl": "https://www.google.com/maps?q=Metrowalk+Commercial+Complex,+Pasig+City,+Philippines",
+      "image": "../src/assets/projects/metrowalk_solar_2.png"
+    },
+    {
+      "title": "20MW Santa Solar (PV) Power Project",
+      "location": "Barangay Nagpanaoan, Municipality of Santa, Province of Ilocos Sur, Philippines",
+      "description": "This solar power plant will generate an annual yield of about 34,000 Mega-Watt Hours of clean electricity, displacing about 18,000 tons of Carbon Dioxide (CO2) per year. (DOE SESC No.: 2016-02-279)",
+      "mapUrl": "https://www.google.com/maps?q=Santa,+Ilocos+Sur,+Philippines",
+      "image": "../src/assets/projects/sanmarcelino_solar_1.png"
+    },
+    {
+      "title": "7MW Santa Agro-Biomass Power Project",
+      "location": "Barangay Nagpanaoan, Municipality of Santa, Province of Ilocos Sur, Philippines",
+      "description": "Using combustion technology to convert agricultural wastes and wood chips into renewable energy, the plant will be producing an annual generation of 42,924 Mega-Watt Hours of electricity, displacing about 60,000 barrels of imported oil per year.",
+      "mapUrl": "https://www.google.com/maps?q=Santa,+Ilocos+Sur,+Philippines",
+      "image": "../src/assets/projects/santa_agro_biomass_1.png"
+    },
+    {
+      "title": "3MW Santa MSW-Biomass Power Project",
+      "location": "Barangay Nagpanaoan, Municipality of Santa, Province of Ilocos Sur, Philippines",
+      "description": "Using gasification technology to convert municipal solid wastes (MSW) into renewable energy, the plant will be producing an annual generation of 18,396 Mega-Watt Hours of electricity, displacing about 26,000 barrels of imported oil per year and helping local government units in managing municipal solid wastes.",
+      "mapUrl": "https://www.google.com/maps?q=Santa,+Ilocos+Sur,+Philippines",
+      "image": "../src/assets/projects/santa_msw_biomass_1.png"
+    },
+    {
+      "title": "3.0MW Mini HydroElectric Power Project",
+      "location": "Chico River, Municipality of Suyo, Province of Ilocos Sur, Philippines",
+      "description": "This plant will generate an annual yield of about 11,664 Mega-Watt Hours of electricity, displacing about 7,000 tons of Carbon Dioxide (CO2) per year.",
+      "mapUrl": "https://www.google.com/maps?q=Suyo,+Ilocos+Sur,+Philippines",
+      "image": "/../src/assets/projects/suyo1_hydro_1.png"
+    }
+  ]
+}
