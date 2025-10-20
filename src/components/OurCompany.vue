@@ -5,7 +5,7 @@ const boardOfDirectors = ref([])
 const management = ref([])
 
 onMounted(async () => {
-  const response = await fetch('../../api/companyInfo.json')
+  const response = await fetch('/public/data/companyInfo.json')
   const data = await response.json()
 
   boardOfDirectors.value = data.boardOfDirectors

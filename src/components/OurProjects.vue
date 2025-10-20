@@ -4,7 +4,8 @@ import { ref, onMounted } from 'vue'
 const projects = ref([])
 
 onMounted(async () => {
-  const response = await fetch('../../api/companyProjects.json')
+  const response = await fetch('/public/data/companyProjects.json')
+
   const data = await response.json()
 
   projects.value = data.projects
