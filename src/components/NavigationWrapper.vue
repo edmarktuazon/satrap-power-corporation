@@ -1,49 +1,9 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import { reactive, ref, onMounted, onUnmounted } from 'vue'
-
+import { useNav } from '@/composables/useNavbar' // Adjust the path based on your project structure
 import navLogo from '/src/assets/images/Satrap_logo_gold_transparent.png'
 
-const navLinks = reactive([
-  { name: 'Home', to: '/' },
-  { name: 'Our Company', to: '/our-company' },
-  { name: 'Our Projects', to: '/our-projects' },
-  { name: 'Contact Us', to: '/contact' },
-])
-
-const isOpen = ref(false)
-const prevScrollY = ref(0)
-const isHidden = ref(false)
-
-const toggleMenu = () => (isOpen.value = !isOpen.value)
-const closeMenu = () => (isOpen.value = false)
-
-const handleResize = () => {
-  if (window.innerWidth >= 1024) isOpen.value = false
-}
-
-const handleScroll = () => {
-  const currentScrollY = window.scrollY
-  // Scroll down: hide navbar
-  if (currentScrollY > prevScrollY.value && currentScrollY > 50) {
-    isHidden.value = true
-  }
-  // Scroll up: show navbar
-  else if (currentScrollY < prevScrollY.value) {
-    isHidden.value = false
-  }
-  prevScrollY.value = currentScrollY
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-  window.addEventListener('resize', handleResize)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-  window.removeEventListener('resize', handleResize)
-})
+const { navLinks, isOpen, isHidden, toggleMenu, closeMenu } = useNav()
 </script>
 
 <template>
