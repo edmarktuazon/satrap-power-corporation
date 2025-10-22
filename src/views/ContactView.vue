@@ -6,9 +6,9 @@ import GoToTopButton from '@/components/buttons/GoToTopButton.vue'
 </script>
 
 <template>
+  <GoToTopButton />
+  <NavigationSection />
   <main>
-    <GoToTopButton />
-    <NavigationSection />
     <ContactSection />
     <FooterSection />
   </main>
