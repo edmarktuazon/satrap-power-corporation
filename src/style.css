@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+/* global usage */
+@theme {
+  --color-primary: oklch(0.724 0.172 81.5);
+}
+
 @layer components {
   .section-spacing {
     @apply py-16 px-4 md:px-8 lg:px-12 xl:px-20 2xl:px-36;
@@ -36,6 +41,7 @@
   }
 }
 
+/* specific usage */
 @layer utilities {
   .text-fluid-lg {
     font-size: clamp(2.75rem, 2.5714rem + 0.8929vw, 4rem);
@@ -49,11 +55,11 @@
   }
 
   .text-primary {
-    color: #c99509;
+    color: oklch(0.724 0.172 81.5);
   }
 
   .bg-primary {
-    background-color: #c99509;
+    background-color: oklch(0.724 0.172 81.5);
   }
 
   .text-secondary {

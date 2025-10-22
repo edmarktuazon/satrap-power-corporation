@@ -8,26 +8,39 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
+      meta: {
+        title: 'Satrap Power Corporation',
+      },
     },
     {
       path: '/our-company',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      meta: {
+        title: 'Satrap Power Corporation | Our Company',
+      },
       component: () => import('../views/AboutView.vue'),
     },
     {
       path: '/our-projects',
       name: 'projects',
+      meta: {
+        title: 'Satrap Power Corporation | Our Projects',
+      },
       component: () => import('../views/ProjectsView.vue'),
     },
     {
       path: '/contact',
       name: 'contact',
+      meta: {
+        title: 'Satrap Power Corporation | Contact Us',
+      },
       component: () => import('../views/ContactView.vue'),
     },
   ],
+})
+
+router.afterEach((to) => {
+  document.title = to.meta.title || 'Satrap Power Corporation'
 })
 
 export default router

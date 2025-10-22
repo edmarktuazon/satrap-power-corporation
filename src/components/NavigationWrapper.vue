@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import { useNav } from '@/composables/useNavbar' // Adjust the path based on your project structure
 import navLogo from '/src/assets/images/Satrap_logo_gold_transparent.png'
 
-const { navLinks, isOpen, isHidden, toggleMenu, closeMenu } = useNav()
+const { navLinks, isOpen, isHidden, toggleMenu, closeMenu, getIsActivePage } = useNav()
 </script>
 
 <template>
@@ -28,13 +28,13 @@ const { navLinks, isOpen, isHidden, toggleMenu, closeMenu } = useNav()
       <nav>
         <ul class="space-x-8 font-medium text-secondary lg:flex hidden">
           <li v-for="link in navLinks" :key="link.to" class="relative group">
-            <RouterLink
-              :to="link.to"
-              class="text-secondary-color transition-colors duration-300 group-hover:text-primary"
-            >
+            <RouterLink :to="link.to" class="text-secondary-color">
               {{ link.name }}
               <span
                 class="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"
+                :class="{
+                  'border-b-[0.125rem] border-primary w-full': getIsActivePage(link.to),
+                }"
               ></span>
             </RouterLink>
           </li>

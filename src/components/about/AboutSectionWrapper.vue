@@ -1,6 +1,6 @@
 <script setup>
 // import companyInfo from '@/data/companyInfo.json'
-import OurCompany from './OurCompany.vue'
+import OurCompanyMembers from './OurCompanyMembers.vue'
 </script>
 
 <template>
@@ -18,7 +18,7 @@ import OurCompany from './OurCompany.vue'
             <slot name="about-paragraph"></slot>
           </p>
         </div>
-        <OurCompany />
+        <OurCompanyMembers />
       </div>
     </div>
   </section>

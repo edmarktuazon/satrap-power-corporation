@@ -1,17 +1,17 @@
 <script setup>
 import { ref } from 'vue'
-import companyInfo from '../data/companyInfo.json'
+import CompanyMembers from '../../data/companyMembers.json'
 
-const boardOfDirectors = ref(companyInfo.boardOfDirectors || [])
-const management = ref(companyInfo.management || [])
+const boardOfDirectors = ref(CompanyMembers.boardOfDirectors || [])
+const management = ref(CompanyMembers.management || [])
 
-// const companyInfo = ref([])
+// const companyMembers = ref([])
 
 // onMounted(async () => {
 //   try {
-//     const response = await fetch('../data/companyInfo.json')
+//     const response = await fetch('../data/companyMembers.json')
 //     const data = await response.json()
-//     companyInfo.value = data.projects || []
+//     companyMembers.value = data.projects || []
 //   } catch (error) {
 //     console.error('Error fetching projects:', error)
 //   }

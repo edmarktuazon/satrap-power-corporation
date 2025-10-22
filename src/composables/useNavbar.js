@@ -1,6 +1,8 @@
 import { reactive, ref, onMounted, onUnmounted } from 'vue'
+import { useRoute } from 'vue-router'
 
 export function useNav() {
+  const route = useRoute()
   const navLinks = reactive([
     { name: 'Home', to: '/' },
     { name: 'Our Company', to: '/our-company' },
@@ -11,6 +13,10 @@ export function useNav() {
   const isOpen = ref(false)
   const prevScrollY = ref(0)
   const isHidden = ref(false)
+
+  const getIsActivePage = (linkTo) => {
+    return route.path === linkTo
+  }
 
   const toggleMenu = () => {
     isOpen.value = !isOpen.value
@@ -55,5 +61,6 @@ export function useNav() {
     isHidden,
     toggleMenu,
     closeMenu,
+    getIsActivePage,
   }
 }

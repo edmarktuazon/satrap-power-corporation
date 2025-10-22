@@ -1,6 +1,6 @@
 <script setup>
 // import companyInfo from '@/data/companyInfo.json'
-import OurProjects from './OurProjects.vue'
+import OurProjects from '../projects/OurProjects.vue'
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script setup>
-import ProjectSectionWrapper from '@/components/ProjectSectionWrapper.vue'
+import ProjectSectionWrapper from '@/components/projects/ProjectSectionWrapper.vue'
 </script>
 
 <template>
