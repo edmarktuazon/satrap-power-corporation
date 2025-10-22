@@ -6,25 +6,9 @@ import ProjectSection from '@/components/ProjectSection.vue'
 import ChevronUpIcon from '@/components/icons/ChevronUpIcon.vue'
 import FooterSection from '@/components/FooterSection.vue'
 
-import { ref, onMounted, onUnmounted } from 'vue'
+import { useScroll } from '@/composables/useScroll'
 
-const isActiveToTopButton = ref(false)
-
-const goToTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' })
-}
-
-const handleScroll = () => {
-  isActiveToTopButton.value = window.scrollY > 0
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
+const { isActiveToTopButton, goToTop } = useScroll()
 </script>
 
 <template>
