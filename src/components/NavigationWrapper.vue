@@ -63,15 +63,15 @@ const { navLinks, isOpen, isHidden, toggleMenu, closeMenu, getIsActivePage } = u
         class="relative w-6 h-5 flex flex-col justify-between cursor-pointer lg:hidden"
       >
         <span
-          class="absolute top-[0.125rem] left-0 w-5 h-0.5 bg-primary transition-all duration-300 rounded-full"
+          class="absolute top-[0.125rem] left-0 w-5 h-0.5 bg-secondary transition-all duration-300 rounded-full"
           :class="{ 'rotate-45 translate-y-[0.5rem]': isOpen }"
         ></span>
         <span
-          class="absolute top-2 left-0 w-5 h-0.5 bg-primary transition-all duration-300 rounded-full"
+          class="absolute top-2 left-0 w-5 h-0.5 bg-secondary transition-all duration-300 rounded-full"
           :class="{ 'opacity-0': isOpen }"
         ></span>
         <span
-          class="absolute bottom-[0.25rem] left-0 w-5 h-0.5 bg-primary transition-all duration-300 rounded-full"
+          class="absolute bottom-[0.25rem] left-0 w-5 h-0.5 bg-secondary transition-all duration-300 rounded-full"
           :class="{ '-rotate-45 -translate-y-1': isOpen }"
         ></span>
       </button>

@@ -1,20 +1,5 @@
 <template>
   <section
-    class="relative h-[50vh] w-full bg-[url('https://images.pexels.com/photos/8250904/pexels-photo-8250904.jpeg')] bg-center bg-cover bg-no-repeat font-montserrat flex items-center justify-center overflow-hidden"
-  >
-    <!-- Dark Glass Overlay -->
-    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
-
-    <div
-      class="relative z-10 flex flex-col items-center justify-center text-center px-4 animate-fade-up"
-    >
-      <h1 class="text-4xl md:text-6xl font-bold text-white mb-3 drop-shadow-lg tracking-wide">
-        Get in Touch
-      </h1>
-    </div>
-  </section>
-
-  <section
     class="min-h-[80vh] bg-gray-50 py-20 px-6 font-montserrat flex items-center justify-center"
   >
     <div
