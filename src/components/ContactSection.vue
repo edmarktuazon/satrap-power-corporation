@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative h-[60vh] w-full bg-[url('https://images.pexels.com/photos/8250904/pexels-photo-8250904.jpeg')] bg-center bg-cover bg-no-repeat font-montserrat flex items-center justify-center overflow-hidden"
+    class="relative h-[50vh] w-full bg-[url('https://images.pexels.com/photos/8250904/pexels-photo-8250904.jpeg')] bg-center bg-cover bg-no-repeat font-montserrat flex items-center justify-center overflow-hidden"
   >
     <!-- Dark Glass Overlay -->
     <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
@@ -14,7 +14,9 @@
     </div>
   </section>
 
-  <section class="bg-gray-50 py-20 px-6 font-montserrat flex items-center justify-center">
+  <section
+    class="min-h-[80vh] bg-gray-50 py-20 px-6 font-montserrat flex items-center justify-center"
+  >
     <div
       class="max-w-4xl w-full bg-white shadow-xl rounded-2xl px-8 py-12 text-center border border-gray-100"
     >
