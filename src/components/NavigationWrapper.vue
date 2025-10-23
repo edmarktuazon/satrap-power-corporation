@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import { useNav } from '@/composables/useNavbar' // Adjust the path based on your project structure
+import { useNav } from '@/composables/useNavbar'
 import navLogo from '/src/assets/images/Satrap_logo_gold_transparent.png'
 
 const { navLinks, isOpen, isHidden, toggleMenu, closeMenu, getIsActivePage } = useNav()
